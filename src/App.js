@@ -1,18 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './Pages/Login/Login';
-import Register from './Pages/Register/Register';
-import Homepage from './Pages/HomePage/HomePage';
+import Header from './Components/Header/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Outlet, Link } from "react-router-dom";
+import './App.scss';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Homepage />} />
-      </Routes>
-    </Router>
+    <div className='app-container'>
+      <div className='header-container'>
+        <Header />
+      </div>
+      <div className='main-container'>
+        <div className='sidenav-container'>
+
+        </div>
+        <div className='app-content'>
+          <Outlet />
+        </div>
+      </div>
+    </div>
   );
 }
 
