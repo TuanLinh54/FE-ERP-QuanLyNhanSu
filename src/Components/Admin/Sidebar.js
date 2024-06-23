@@ -9,10 +9,12 @@ import {
     SidebarContent,
 } from 'react-pro-sidebar';
 import { DiReact } from "react-icons/di";
-import { MdDashboard } from "react-icons/md";
-import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
+import { MdDashboard, MdWorkOutline, MdOutlineWorkOff, MdOutlineSettings } from "react-icons/md";
+import { TbReportMoney, TbReportAnalytics } from "react-icons/tb";
+import { FaGem, FaList, FaGithub, FaHeart, FaRegUser, FaRegCalendarCheck, FaProjectDiagram, FaAward } from 'react-icons/fa';
 import sidebarBg from '../../assets/images/bg2.jpg';
 import './SideBar.scss';
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = (props) => {
@@ -50,51 +52,53 @@ const Sidebar = (props) => {
                             icon={<MdDashboard />}
                         >
                             Trang chủ
+                            <Link to='/admin' />
                         </MenuItem>
                         <MenuItem
-                            icon={<MdDashboard />}
+                            icon={<FaRegUser />}
                         >
                             Nhân viên
+                            <Link to='/admin/manage-users' />
                         </MenuItem>
                         <MenuItem
-                            icon={<MdDashboard />}
+                            icon={<MdWorkOutline />}
                         >
                             Công việc
                         </MenuItem>
                         <MenuItem
-                            icon={<MdDashboard />}
+                            icon={<TbReportMoney />}
                         >
                             Bảng lương
                         </MenuItem>
                         <MenuItem
-                            icon={<MdDashboard />}
+                            icon={<FaRegCalendarCheck />}
                         >
                             Bảng chấm công
                         </MenuItem>
                         <MenuItem
-                            icon={<MdDashboard />}
+                            icon={<FaProjectDiagram />}
                         >
                             Dự án
                         </MenuItem>
                         <MenuItem
-                            icon={<MdDashboard />}
+                            icon={<MdOutlineWorkOff />}
                         >
                             Nghỉ việc
                         </MenuItem>
                         <MenuItem
-                            icon={<MdDashboard />}
+                            icon={<FaAward />}
                         >
                             Khen thưởng
                         </MenuItem>
                         <MenuItem
-                            icon={<MdDashboard />}
-                        >
-                            Sự cố
-                        </MenuItem>
-                        <MenuItem
-                            icon={<MdDashboard />}
+                            icon={<TbReportAnalytics />}
                         >
                             Báo cáo
+                        </MenuItem>
+                        <MenuItem
+                            icon={<MdOutlineSettings />}
+                        >
+                            Thiết lập
                         </MenuItem>
                     </Menu>
 

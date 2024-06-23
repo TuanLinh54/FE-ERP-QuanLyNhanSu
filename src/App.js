@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Components/Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import './App.scss';
 
 function App() {

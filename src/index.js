@@ -10,6 +10,8 @@ import Admin from './Components/Admin/Admin';
 import Employee from './Components/Employee/Employee';
 import Header from './Components/Header/Header';
 import HomePage from './Components/Home/HomePage';
+import ManageUser from './Components/Admin/Content/ManageUser';
+import DashBoard from './Components/Admin/Content/DashBoard';
 
 
 
@@ -23,9 +25,10 @@ root.render(
           <Route index element={<HomePage />} />
           <Route path="employees" element={<Employee />} />
         </Route>
-        <Route path="admin" element={<Admin />} />
-
-
+        <Route path="admin" element={<Admin />} >
+          <Route index element={<DashBoard />} />
+          <Route path="manage-users" element={<ManageUser />} />
+        </Route>
       </Routes>
     </BrowserRouter >
 
